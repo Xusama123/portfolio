@@ -7,6 +7,9 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
   </head>
   <body>
     <nav id="desktop-nav">
@@ -248,82 +251,111 @@
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          
+          <!-- Video Game Discovery App -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <a href="#" class="lightbox-trigger" data-full-img="./assets/project-1.png" data-caption="Discover new video games effortlessly with this app, featuring API integration, user-friendly navigation, and a personalized game wishlist.">
+                <img
+                  src="./assets/project-1.png"
+                  alt="Video Game Discovery App"
+                  class="project-img"
+                />
+              </a>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Video Game Discovery App</h2>
+            <p class="project-description">
+              Discover new video games effortlessly with this app, featuring API integration, user-friendly navigation, and a personalized game wishlist.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/videogame-discovery-app'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://videogame-discovery-app.demo/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
+    
+          <!-- Auction API App -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+              <a href="#" class="lightbox-trigger" data-full-img="./assets/project-2.png" data-caption="A modern auction platform built with Caravel, allowing users to bid, track, and manage auctions seamlessly in real time.">
+                <img
+                  src="./assets/project-2.png"
+                  alt="Auction API App"
+                  class="project-img"
+                />
+              </a>
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Auction API App</h2>
+            <p class="project-description">
+              A modern auction platform built with Caravel, allowing users to bid, track, and manage auctions seamlessly in real time.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/auction-api-app'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://auction-api-app.demo/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
+    
+          <!-- Xtended Survival Game -->
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
+              <a href="#" class="lightbox-trigger" data-full-img="./assets/project-3.png" data-caption="A thrilling JavaFX-based survival game where players navigate challenges, gather resources, and test their strategic skills to endure.">
+                <img
+                  src="./assets/project-3.png"
+                  alt="Xtended Survival Game"
+                  class="project-img"
+                />
+              </a>
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">Xtended Survival</h2>
+            <p class="project-description">
+              A thrilling JavaFX-based survival game where players navigate challenges, gather resources, and test their strategic skills to endure.
+            </p>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/xtended-survival-game'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://xtended-survival-game.demo/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
+          
         </div>
       </div>
-
     </section>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span id="lightbox-close" class="close-btn">&times;</span>
+      <img id="lightbox-img" src="" alt="Lightbox Image">
+      <div id="lightbox-caption" class="caption"></div>
+    </div>
+    
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>

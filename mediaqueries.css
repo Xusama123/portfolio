@@ -67,6 +67,8 @@
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
+    flex-direction: column;  /* Ensure the containers stack vertically */
+    align-items: center;  /* Center the content */
   }
   .contact-info-container {
     margin: 0;
@@ -99,5 +101,23 @@
   }
   .text-container {
     text-align: justify;
+  }
+
+  /* Specific styles for project layout */
+  .experience-details-container {
+    display: flex;
+    flex-direction: column;  /* Stack projects vertically */
+    align-items: center;     /* Center the project containers */
+    gap: 2rem;               /* Space between projects */
+  }
+
+  .details-container {
+    width: 100%;  /* Ensure each project takes full width */
+    max-width: 100%; /* Prevent content from overflowing */
+  }
+
+  .project-img {
+    width: 100%;  /* Make sure images are responsive */
+    height: auto; /* Maintain aspect ratio */
   }
 }

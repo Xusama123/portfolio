@@ -446,3 +446,157 @@ footer p {
   color: white; /* Change button text color */
   transition: all 300ms ease;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-container, .experience-details-container {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section-container {
+  animation-delay: 0.5s;
+}
+
+.experience-details-container {
+  animation-delay: 1s;
+}
+#profile, #about, #experience, #projects, #contact {
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add an "invisible" class that will trigger the animation when the section is in the viewport */
+.invisible {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.visible {
+  animation: fadeInUp 1s forwards;
+}
+
+/* SECTION */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+/* Set sections initially invisible, then add .invisible class */
+#about, #experience, #projects, #contact, footer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+#about.visible, #experience.visible, #projects.visible, #contact.visible, footer.visible {
+  animation: fadeInUp 1s forwards;
+}
+/* Basic Styling for the Gallery */
+#projects .project-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Lightbox Modal Styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
